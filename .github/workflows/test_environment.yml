@@ -27,10 +27,10 @@ jobs:
         sleep 15
 
     - name: Make test script executable
-      run: chmod +x test_flask_app.sh
+      run: chmod +x test.sh
 
     - name: Run test script
-      run: ./test_flask_app.sh
+      run: ./test.sh
 
     - name: Shutdown Docker Compose
       run: docker-compose down
