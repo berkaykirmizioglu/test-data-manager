@@ -66,7 +66,7 @@ docker-compose up --build
 This will start both the Flask application and the Redis server.
 
 ## Testing
-A script named test_flask_app.sh is provided to test the application endpoints. This script uses curl commands to interact with the Flask API.
+A script named test.sh is provided to test the application endpoints. This script uses curl commands to interact with the Flask API.
 
 Here’s how to run the test script:
 ```bash
@@ -100,7 +100,7 @@ The workflow performs the following steps:
 - Sets up Docker Compose
 - Builds and starts the Docker containers
 - Waits for the services to be ready
-- Runs the `test_flask_app.sh` script
+- Runs the `test.sh` script
 - Shuts down the Docker Compose services
 
 ## Contributing
