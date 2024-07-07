@@ -1,6 +1,7 @@
 from flask import Flask, jsonify, request
 from user_service import UserService
 from redis_client import RedisClient
+from mongo_client import MongoClient
 import yaml
 
 with open('config.yaml', 'r') as file:
@@ -8,8 +9,15 @@ with open('config.yaml', 'r') as file:
 
 app = Flask(__name__)
 
-redis_client = RedisClient()
-user_service = UserService(redis_client)
+storage_type = config['data_storage']
+if storage_type == 'mongodb':
+    user_client = MongoClient()
+elif storage_type == 'redis':
+    user_client = RedisClient()
+else:
+    raise ValueError("Unsupported data storage type specified in config.yaml")
+
+user_service = UserService(user_client)
 
 
 @app.route('/api/user', methods=['POST', 'GET'])

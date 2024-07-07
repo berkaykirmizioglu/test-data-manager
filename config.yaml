@@ -1,7 +1,15 @@
+### "redis" or "mongodb"
+data_storage: redis
+
 redis:
   host: redis
   port: 6379
   db: 0
+
+mongodb:
+  host: mongodb
+  port: 27017
+  db: userdb
 
 flask:
   host: 0.0.0.0

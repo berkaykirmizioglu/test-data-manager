@@ -2,3 +2,4 @@ Flask==3.0.3
 redis==5.0.7
 Faker==26.0.0
 PyYAML~=6.0.1
+pymongo~=4.8.0
