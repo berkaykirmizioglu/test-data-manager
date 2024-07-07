@@ -1,6 +1,6 @@
-# Flask & Redis Dockerized TDM (Test Data Manager) Application
+# Flask & Redis-MongoDB Dockerized TDM (Test Data Manager) Application
 
-This project demonstrates how to build a simple Flask application that interacts with Redis to manage test data, all managed and run within Docker containers. The project also includes a GitHub Actions workflow for automated testing.
+This project demonstrates how to build a simple Flask application that interacts with Redis/MongoDB to manage test data, all managed and run within Docker containers. The project also includes a GitHub Actions workflow for automated testing.
 
 ## Table of Contents
 
@@ -29,8 +29,8 @@ Make sure you have the following installed on your local development machine:
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/berkaykirmizioglu/redis-tdm.git
-    cd redis-tdm
+    git clone https://github.com/berkaykirmizioglu/test-data-manager.git
+    cd test-data-manager
     ```
 
 2. Build and start the Docker containers:
@@ -43,27 +43,16 @@ Make sure you have the following installed on your local development machine:
 
 ## Configuration
 
-The application configuration is managed via a `config.yaml` file. This file contains settings for connecting to Redis and for configuring the Flask application.
+The application configuration is managed via a `config.yaml` file. This file contains settings for connecting to Redis | MongoDB and for configuring the Flask application.
 
-Here is a sample `config.yaml`:
-
-```yaml
-redis:
-  host: redis
-  port: 6379
-  db: 0
-
-flask:
-  host: 0.0.0.0
-  port: 5000
-```
+Please check config.yaml
 
 ## Running The Application
 To start the application, simply use Docker Compose:
 ```bash
 docker-compose up --build
 ```
-This will start both the Flask application and the Redis server.
+This will start both the Flask application and the Redis | MongoDB server.
 
 ## Testing
 A script named test.sh is provided to test the application endpoints. This script uses curl commands to interact with the Flask API.
