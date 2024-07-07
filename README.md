@@ -1,6 +1,6 @@
 # Flask & Redis Dockerized TDM (Test Data Manager) Application
 
-Welcome to the Flask & Redis application! This project demonstrates how to build a simple Flask application that interacts with Redis to manage test data, all managed and run within Docker containers. The project also includes a GitHub Actions workflow for automated testing.
+This project demonstrates how to build a simple Flask application that interacts with Redis to manage test data, all managed and run within Docker containers. The project also includes a GitHub Actions workflow for automated testing.
 
 ## Table of Contents
 
